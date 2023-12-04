@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
+using Szyfry;
 
 namespace HomophonicCipherWPF
 {
@@ -136,5 +137,12 @@ namespace HomophonicCipherWPF
             newWindow.Show();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 newWindow = new Window2();
+
+            this.Close();
+            newWindow.Show();
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Windows;
 using System.Windows.Input;
+using Szyfry;
 
 namespace CaesarCipherWPF
 {
@@ -65,6 +66,12 @@ namespace CaesarCipherWPF
             newWindow.Show();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 newWindow = new Window2();
 
+            this.Close();
+            newWindow.Show();
+        }
     }
 }
