@@ -1,7 +1,7 @@
-﻿<Window x:Class="CaesarCipherWPF.MainWindow"
+﻿<Window x:Class="HomophonicCipherWPF.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Szyfr Cezara" Height="420" Width="500"
+        Title="Szyfr Homofoniczny" Height="420" Width="500"
         WindowStartupLocation="CenterScreen" Cursor="Arrow"
         >
     <Grid Background="#F4F4F4">
@@ -28,22 +28,19 @@
         <StackPanel Margin="20">
             <TextBlock Text="Wprowadź tekst:"/>
             <TextBox x:Name="PlainTextTextBox"/>
-
-            <TextBlock Text="Wpisz przesunięcie (1-31):"/>
-            <TextBox x:Name="ShiftTextBox"/>
-
-            <Button Content="Koduj" Click="EncryptButton_Click" Margin="0,0,5,10"/>
-            <Button Content="Dekoduj" Click="DecryptButton_Click" Margin="0,0,5,10"/>
+            <Button Content="Koduj" Click="EncryptButton_Click"/>
+            <Button Content="Dekoduj" Click="DecryptButton_Click"/>
 
             <TextBlock Text="Rezultat:"/>
             <TextBox x:Name="ResultTextBox" IsReadOnly="True"/>
             <TextBlock Text="Pozostałe szyfry:"/>
 
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Homofoniczny" Click="OpenNewWindowButton_Click" Width="91" Margin="0,10,5,0"/>
-                <Button Content="Polibiusza"  Width="91" Margin="0,10,5,0"/>
-                <Button Content="Polibiusza z dodatkiem" Margin="0,10,0,0" Width="140"/>
-            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,91">
+            <Button Content="Cezara" Click="OpenNewWindowButton_Click" Width="91" Margin="10"/>
+            <Button Content="Polibiusza"  Width="91" Margin="10"/>
+            <Button Content="Polibiusza z dodatkiem" Margin="10" Width="140"/>
         </StackPanel>
     </Grid>
 </Window>

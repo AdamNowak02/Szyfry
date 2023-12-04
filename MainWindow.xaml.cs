@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomophonicCipherWPF;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -51,5 +52,19 @@ namespace CaesarCipherWPF
         {
             return Encrypt(text, PolishAlphabet.Length - shift);
         }
+
+        private void OpenNewWindowButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Tworzymy nowe okno
+            Window1 newWindow = new Window1();
+
+            // Zamykamy bieżące okno
+            this.Close();
+
+            // Otwieramy nowe okno
+            newWindow.Show();
+        }
+
+
     }
 }
