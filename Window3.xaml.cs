@@ -3,18 +3,20 @@ using HomophonicCipherWPF;
 using System;
 using System.Windows;
 
+//do wygenerowanej liczby (przecięcie współrzędnych z tablicy) dodawana jest liczba 2 a następnie suma podnoszona jest do kwadratu)
+//
+
 namespace Szyfry
 {
     public partial class Window3 : Window
     {
         private char[,] polibiuszTable = {
-    {'a', 'ą', 'b', 'c', 'ć', 'd', 'e'},
-    {'ę', 'f', 'g', 'h', 'i', 'j', 'k'},
-    {'l', 'ł', 'm', 'n', 'ń', 'o', 'ó'},
-    {'p', 'q', 'r', 's', 'ś', 't', 'u'},
-    {'v', 'w', 'x', 'y', 'z', 'ź', 'ż'}
-};
-
+            {'a', 'ą', 'b', 'c', 'ć', 'd', 'e'},
+            {'ę', 'f', 'g', 'h', 'i', 'j', 'k'},
+            {'l', 'ł', 'm', 'n', 'ń', 'o', 'ó'},
+            {'p', 'q', 'r', 's', 'ś', 't', 'u'},
+            {'v', 'w', 'x', 'y', 'z', 'ź', 'ż'}
+        };
 
         public Window3()
         {
@@ -54,7 +56,9 @@ namespace Szyfry
                     {
                         if (polibiuszTable[i, j] == character)
                         {
-                            encryptedMessage += (i + 1).ToString() + (j + 1).ToString() + ' ';
+                            // Dodaj 2, a następnie podnieś do kwadratu
+                            int encryptedValue = (i + 1) * 10 + (j + 1) + 2;
+                            encryptedMessage += (encryptedValue * encryptedValue).ToString() + ' ';
                             break;
                         }
                     }
@@ -78,8 +82,10 @@ namespace Szyfry
                     continue;
                 }
 
-                int row = int.Parse(pair[0].ToString()) - 1;
-                int col = int.Parse(pair[1].ToString()) - 1;
+                // Wydobywanie liczby z pary, odejmowanie 2 i pierwiastkowanie kwadratowe
+                int decryptedValue = (int)Math.Sqrt(int.Parse(pair)) - 2;
+                int row = decryptedValue / 10 - 1;
+                int col = decryptedValue % 10 - 1;
 
                 decryptedMessage += polibiuszTable[row, col];
             }
