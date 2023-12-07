@@ -73,5 +73,13 @@ namespace CaesarCipherWPF
             this.Close();
             newWindow.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window3 newWindow = new Window3();
+
+            this.Close();
+            newWindow.Show();
+        }
     }
 }

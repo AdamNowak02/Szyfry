@@ -21,39 +21,42 @@ namespace HomophonicCipherWPF
         {
             homophonicMapping = new Dictionary<char, List<string>>();
 
-            homophonicMapping.Add('A', new List<string> { "01", "02", "03" });
-            homophonicMapping.Add('Ą', new List<string> { "04", "05", "06" });
-            homophonicMapping.Add('B', new List<string> { "07", "08", "09" });
-            homophonicMapping.Add('C', new List<string> { "10", "11", "12" });
-            homophonicMapping.Add('Ć', new List<string> { "13", "14" });
-            homophonicMapping.Add('D', new List<string> { "15", "16", "17" });
-            homophonicMapping.Add('E', new List<string> { "18", "19", "20" });
-            homophonicMapping.Add('Ę', new List<string> { "21", "22" });
-            homophonicMapping.Add('F', new List<string> { "23", "24", "25" });
-            homophonicMapping.Add('G', new List<string> { "26", "27", "28" });
-            homophonicMapping.Add('H', new List<string> { "29", "30", "31" });
-            homophonicMapping.Add('I', new List<string> { "32", "33", "34" });
-            homophonicMapping.Add('J', new List<string> { "35", "36", "37" });
-            homophonicMapping.Add('K', new List<string> { "38", "39", "40" });
-            homophonicMapping.Add('L', new List<string> { "41", "42", "43" });
-            homophonicMapping.Add('Ł', new List<string> { "44", "45" });
-            homophonicMapping.Add('M', new List<string> { "46", "47", "48" });
-            homophonicMapping.Add('N', new List<string> { "49", "50", "51" });
-            homophonicMapping.Add('Ń', new List<string> { "52", "53" });
-            homophonicMapping.Add('O', new List<string> { "54", "55", "56" });
-            homophonicMapping.Add('Ó', new List<string> { "57", "58" });
-            homophonicMapping.Add('P', new List<string> { "59", "60", "61" });
-            homophonicMapping.Add('Q', new List<string> { "62", "63" });
-            homophonicMapping.Add('R', new List<string> { "64", "65", "66" });
-            homophonicMapping.Add('S', new List<string> { "67", "68", "69" });
-            homophonicMapping.Add('Ś', new List<string> { "70", "71" });
-            homophonicMapping.Add('T', new List<string> { "72", "73", "74" });
-            homophonicMapping.Add('U', new List<string> { "75", "76", "77" });
-            homophonicMapping.Add('W', new List<string> { "78", "79", "80" });
-            homophonicMapping.Add('Y', new List<string> { "81", "82", "83" });
-            homophonicMapping.Add('Z', new List<string> { "84", "85", "86" });
-            homophonicMapping.Add('Ż', new List<string> { "87", "88" });
-            homophonicMapping.Add('Ź', new List<string> { "89", "90" });
+            //zadeklaruj słownik z literami alfabetu
+            homophonicMapping.Add('A', new List<string> { "92", "48", "18", "04", "17", "82", "34", "58", "41" });
+            homophonicMapping.Add('Ą', new List<string> { "45" });
+            homophonicMapping.Add('B', new List<string> { "19" });
+            homophonicMapping.Add('C', new List<string> { "80", "73", "95", "66" });
+            homophonicMapping.Add('Ć', new List<string> { "12" });
+            homophonicMapping.Add('D', new List<string> { "21", "68", "40" });
+            homophonicMapping.Add('E', new List<string> { "23", "76", "62", "57", "01", "56", "44", "65" });
+            homophonicMapping.Add('Ę', new List<string> { "50" });
+            homophonicMapping.Add('F', new List<string> { "32" });
+            homophonicMapping.Add('G', new List<string> { "29" });
+            homophonicMapping.Add('H', new List<string> { "35" });
+            homophonicMapping.Add('I', new List<string> { "89", "10", "93", "15", "63", "72", "11", "24" });
+            homophonicMapping.Add('J', new List<string> { "28", "70" });
+            homophonicMapping.Add('K', new List<string> { "78", "98", "81", "69" });
+            homophonicMapping.Add('L', new List<string> { "26", "88" });
+            homophonicMapping.Add('Ł', new List<string> { "42", "77" });
+            homophonicMapping.Add('M', new List<string> { "97", "13", "36" });
+            homophonicMapping.Add('N', new List<string> { "03", "14", "75", "74", "71", "55" });
+            homophonicMapping.Add('Ń', new List<string> { "25" });
+            homophonicMapping.Add('O', new List<string> { "08", "53", "07", "94", "49", "09", "54", "38" });
+            homophonicMapping.Add('Ó', new List<string> { "47" });
+            homophonicMapping.Add('P', new List<string> { "20", "64", "61" });
+            homophonicMapping.Add('Q', new List<string> { "59" });
+            homophonicMapping.Add('R', new List<string> { "33", "37", "84", "46", "86" });
+            homophonicMapping.Add('S', new List<string> { "31", "52", "60", "83" });
+            homophonicMapping.Add('Ś', new List<string> { "16" });
+            homophonicMapping.Add('T', new List<string> { "85", "22", "67", "91" });
+            homophonicMapping.Add('U', new List<string> { "90", "79", "74" });
+            homophonicMapping.Add('V', new List<string> { "43" });
+            homophonicMapping.Add('W', new List<string> { "30", "51", "96", "87", "05" });
+            homophonicMapping.Add('X', new List<string> { "27" });
+            homophonicMapping.Add('Y', new List<string> { "06", "99", "16", "02" });
+            homophonicMapping.Add('Z', new List<string> { "59", "28", "75", "92", "70", "43" });
+            homophonicMapping.Add('Ż', new List<string> { "39" });
+            homophonicMapping.Add('Ź', new List<string> { "58", "76" });
         }
 
 
@@ -140,6 +143,14 @@ namespace HomophonicCipherWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window2 newWindow = new Window2();
+
+            this.Close();
+            newWindow.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window3 newWindow = new Window3();
 
             this.Close();
             newWindow.Show();

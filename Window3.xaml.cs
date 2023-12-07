@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace Szyfry
 {
-    public partial class Window2 : Window
+    public partial class Window3 : Window
     {
         private char[,] polibiuszTable = {
     {'a', 'ą', 'b', 'c', 'ć', 'd', 'e'},
@@ -16,7 +16,7 @@ namespace Szyfry
 };
 
 
-        public Window2()
+        public Window3()
         {
             InitializeComponent();
         }
@@ -86,7 +86,7 @@ namespace Szyfry
 
             return decryptedMessage;
         }
-    
+
 
 
 
@@ -114,7 +114,7 @@ namespace Szyfry
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window3 newWindow = new Window3();
+            Window2 newWindow = new Window2();
 
             this.Close();
             newWindow.Show();

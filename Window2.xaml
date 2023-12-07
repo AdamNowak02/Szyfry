@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Szyfr Polibiusza" Height="420" Width="500"
-        WindowStartupLocation="CenterScreen" Cursor="Arrow"
+        WindowStartupLocation="CenterScreen" Cursor="Arrow" Icon="/klodka.ico"
         >
     <Grid Background="#F4F4F4">
         <Grid.Resources>
@@ -24,8 +24,16 @@
                 <Setter Property="Foreground" Value="White"/>
             </Style>
         </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="278*"/>
+            <ColumnDefinition Width="91*"/>
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Margin="20">
+        <StackPanel Margin="9,20,20,20" Grid.ColumnSpan="5" Grid.Column="1">
             <TextBlock Text="Wprowadź tekst:"/>
             <TextBox x:Name="PlainTextTextBox"/>
             <Button Content="Koduj" Click="EncryptButton_Click"/>
@@ -37,10 +45,10 @@
 
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,92">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,92" Grid.ColumnSpan="5">
             <Button Content="Cezara" Click="OpenNewWindowButton_Click" Width="91" Margin="10"/>
             <Button Content="Homofoniczny"  Width="91" Margin="10" Click="Button_Click"/>
-            <Button Content="Polibiusza z dodatkiem" Margin="10" Width="140"/>
+            <Button Content="Polibiusza z dodatkiem" Margin="10" Width="140" Click="Button_Click_1"/>
         </StackPanel>
     </Grid>
 </Window>
