@@ -40,10 +40,10 @@
             <TextBlock Text="Pozostałe szyfry:"/>
 
             <StackPanel Orientation="Horizontal">
-                <Button Content="Cezara"  Width="91" Margin="0,0,15,0"/>
-                <Button Content="Homofoniczny"  Width="91" Margin="0,0,15,0"/>
-                <Button Content="Polibiusza"  Width="91" Margin="0,0,15,0" />
-                <Button Content="Polibiusza z dodatkiem" Margin="0,0,15,0" Width="140" />
+                <Button Content="Cezara"  Width="91" Margin="0,0,10,0"/>
+                <Button Content="Homofoniczny"  Width="91" Margin="0,0,10,0"/>
+                <Button Content="Polibiusza"  Width="91" Margin="0,0,10,0" />
+                <Button Content="Polibiusza z dodatkiem" Margin="0,0,10,0" Width="140" />
             </StackPanel>
         </StackPanel>
     </Grid>
