@@ -8,14 +8,12 @@ namespace CaesarCipherWPF
 {
     public partial class MainWindow : Window
     {
-        // Rozszerzony polski alfabet w małych literach
         private static readonly string PolishAlphabet = "aąbcćdeęfghijklłmnńoóprsśtuwyzźż";
 
         public MainWindow()
         {
             InitializeComponent();
 
-            // Ustawienie kodowania na Unicode dla kontrolek tekstowych
             PlainTextTextBox.SetValue(InputMethod.IsInputMethodEnabledProperty, false);
             ShiftTextBox.SetValue(InputMethod.IsInputMethodEnabledProperty, false);
             ResultTextBox.SetValue(InputMethod.IsInputMethodEnabledProperty, false);
@@ -23,14 +21,26 @@ namespace CaesarCipherWPF
 
         private void EncryptButton_Click(object sender, RoutedEventArgs e)
         {
-            int shift = Convert.ToInt32(ShiftTextBox.Text);
-            ResultTextBox.Text = Encrypt(PlainTextTextBox.Text.ToLower(), shift).Replace(" ", "");
+            if (int.TryParse(ShiftTextBox.Text, out int shift) && shift >= 1 && shift <= 31)
+            {
+                ResultTextBox.Text = Encrypt(PlainTextTextBox.Text.ToLower(), shift).Replace(" ", "");
+            }
+            else
+            {
+                MessageBox.Show("Podaj poprawną liczbę całkowitą od 1 do 31 jako przesunięcie!", "Błędne dane");
+            }
         }
 
         private void DecryptButton_Click(object sender, RoutedEventArgs e)
         {
-            int shift = Convert.ToInt32(ShiftTextBox.Text);
-            ResultTextBox.Text = Decrypt(PlainTextTextBox.Text.ToLower(), shift).Replace(" ", "");
+            if (int.TryParse(ShiftTextBox.Text, out int shift) && shift >= 1 && shift <= 31)
+            {
+                ResultTextBox.Text = Decrypt(PlainTextTextBox.Text.ToLower(), shift).Replace(" ", "");
+            }
+            else
+            {
+                MessageBox.Show("Podaj poprawną liczbę całkowitą od 1 do 31 jako przesunięcie!","Błędne dane");
+            }
         }
 
         private string Encrypt(string text, int shift)
