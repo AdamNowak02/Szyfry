@@ -155,5 +155,13 @@ namespace HomophonicCipherWPF
             this.Close();
             newWindow.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Window4 newWindow = new Window4();
+
+            this.Close();
+            newWindow.Show();
+        }
     }
 }

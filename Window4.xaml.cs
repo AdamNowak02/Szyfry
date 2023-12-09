@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CaesarCipherWPF;
+using HomophonicCipherWPF;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -98,6 +100,38 @@ namespace Szyfry
                 }
             }
             return ' '; // Handle the case where the character is not found
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Window2 newWindow = new Window2();
+
+            this.Close();
+            newWindow.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Window3 newWindow = new Window3();
+
+            this.Close();
+            newWindow.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Window1 newWindow = new Window1();
+
+            this.Close();
+            newWindow.Show();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+
+            this.Close();
+            newWindow.Show();
         }
     }
 }
